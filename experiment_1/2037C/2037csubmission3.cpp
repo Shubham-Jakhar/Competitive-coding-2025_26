@@ -18,7 +18,7 @@ int main() {
         cout << i << " ";
     }
     cout << "5 4 ";
-    for (int i = 2; i <= n; i += 2) {
+    for (int i = 2; i <= n; i =i + 2) {
         if (i == 4) continue;
         cout << i << " ";
     } 

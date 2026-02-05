@@ -13,8 +13,10 @@ int main() {
         string s;
         cin >> s;
         map<char, int> freq;
-        for (char c : s) freq[c]++;
-
+        for (int i=0;i<s.size();i++){
+            char c = s[i];
+            freq[c]++;
+        }
         char maxChar = s[0], minChar = s[0];
         for (auto &p : freq) {
             if (p.second > freq[maxChar]) maxChar = p.first;
@@ -24,14 +26,12 @@ int main() {
             cout << s << "\n";
             continue;
         }
-
         for (int i = 0; i < n; i++) {
             if (s[i] == minChar) {
                 s[i] = maxChar;
                 break;
             }
         }
-
         cout << s << "\n";
     }
     return 0;
